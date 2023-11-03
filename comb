@@ -1,0 +1,13 @@
+function combinations(str){
+ const array = [];
+function backtrack(start,path){
+  array.push(path);
+ for(let i = start; i < str.length; i++) {
+ backtrack(i +1, path + str[i]);
+  }
+}
+  backtrack(0, '');
+
+return array;
+}
+document.write(combinations("dog"));
